@@ -1,46 +1,46 @@
  <!DOCTYPE html>
  <html>
    <head>
+      <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-    scale=1">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
      <title>Prince web</title>
      <style>
-       #container{
-         max-width: 720px;
-         margin: 0 auto;
-       }
-       h1, h2{
-     font-size: 40px;
-     font-family: Roboto;
-     font-weight: normal;
-     color: rgb(100,100,100);
-     text-align: center;
-     }
        #banner{
          width: 100%;
          height:360px;
-         object-fit: cover;
        }
-       .text{
-         font-family: Roboto;
-         color: rgb(80,80,80)
+       #text{
+         color: rgb(120,120,120);
+         margin-bottom: 4px;
+         
+       }
+       .dv{
+         margin-bottom: 16px;
+         padding-bottom: 8px;
        }
      </style>
    </head>
    <body>
-     <div id="container">
-     <h1>
+     <div class="container">
+     <h1 class="text-center mt-2 mb-4">
        Prince career
      </h1>
-    <img id="banner" src="https://apppython-2.jean-paulpaul13.repl.co/static/img.jpg" alt="">
-     <h2>About Prince</h2>
-     <p class="text">
+    <img class="img-fluid" id="banner" src="https://apppython-2.jean-paulpaul13.repl.co/static/img.jpg" alt="">
+     <h2 class="text-center">About Prince</h2>
+     <p  class="lead">
        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia consequuntur autem eligendi. Molestias quas cumque dolore. Laborum, ea. Esse atque veniam, distinctio earum explicabo quis magni repudiandae nihil veritatis.
     Recusandae eius laudantium est sunt, totam voluptate harum cum accusamus iure dolorum nam cupiditate fugit corrupti unde, labore ipsum! Aperiam nesciunt 
      </p>
-     <h2>Open positions</h2>
-     <p class="text">TODO - show the jobs here</p>
-       <div style="text-align: center;">
-     <button>Contact Us</button>
-         <p>Copyright 2023, Pkalala</p>
+      <h2 class="text-center mt-2 mb-4">Open positions</h2>
+     <div>
+       {% for job in jobs %}
+          {% include 'jobitm.html'%}
+       {% endfor %}
+     </div>
+       <div class="text-center">
+     <button  class="btn btn-primary btn-lg">Contact Us</button>
+         <p class="mt-4">Copyright 2023, Pkalala</p>
        </div>
      </div>
    </body>
