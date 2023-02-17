@@ -9,6 +9,7 @@
        #banner{
          width: 100%;
          height:360px;
+         padding-bottom:15px;
        }
        #text{
          color: rgb(120,120,120);
@@ -19,19 +20,30 @@
          margin-bottom: 16px;
          padding-bottom: 8px;
        }
+       #aside{
+        height: 320px; 
+         border-radius:4px;
+       }
      </style>
    </head>
    <body>
+     {% include 'navbar.html' %}
+     <img class="img-fluid" id="banner" src="https://apppython-2.jean-paulpaul13.repl.co/static/img.jpg" alt="">
      <div class="container">
      <h1 class="text-center mt-2 mb-4">
-       Prince career
+       Prince careers
      </h1>
-    <img class="img-fluid" id="banner" src="https://apppython-2.jean-paulpaul13.repl.co/static/img.jpg" alt="">
-     <h2 class="text-center">About Prince</h2>
+     <div class="row" style="margin-bottom:16px;">
+       <div class="col-md-6">
      <p  class="lead">
        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia consequuntur autem eligendi. Molestias quas cumque dolore. Laborum, ea. Esse atque veniam, distinctio earum explicabo quis magni repudiandae nihil veritatis.
     Recusandae eius laudantium est sunt, totam voluptate harum cum accusamus iure dolorum nam cupiditate fugit corrupti unde, labore ipsum! Aperiam nesciunt 
      </p>
+      </div>
+       <div class="d-none d-md-block col-6">
+         <img src="/static/work.jpg" alt="" id="aside">
+       </div>
+    </div>
       <h2 class="text-center mt-2 mb-4">Open positions</h2>
      <div>
        {% for job in jobs %}
@@ -39,9 +51,9 @@
        {% endfor %}
      </div>
        <div class="text-center">
-     <button  class="btn btn-primary btn-lg">Contact Us</button>
-         <p class="mt-4">Copyright 2023, Pkalala</p>
+     <a href="/google.com" type="button"  class="btn btn-primary btn-lg">Contact Us</a>
        </div>
      </div>
+     {% include 'footer.html'%}
    </body>
  </html>
